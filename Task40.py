@@ -1,2 +1,6 @@
-Import pandas as pd
+import pandas as pd
 
+data = pd.read_csv("california_housing_test.csv")
+res = data[(data['population'] > 0) &
+           (data['population'] < 501)].median_house_value.mean()
+print(res)
